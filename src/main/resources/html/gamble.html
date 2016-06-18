@@ -1,0 +1,49 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-1 col-lg-offset-9" ng-bind-html="username">
+        </div>
+        <div class="col-lg-1"><a href="#/home">Logout</a></div>
+    </div>
+    <div class="row" style="margin-top: 20px">
+        <div class="box purple col-lg-4 col-lg-offset-1">
+            <h3 class="title">Current Points</h3>
+            <div class="splitter"></div>
+            <div class="text">
+                This is your current point status.
+            </div>
+            <div class="text" style="font-size: 50pt" ng-bind-html="points"></div>
+            <div ng-if="message" class="alert {{messageClass}}" role="alert"><span ng-bind-html="message"></span></div>
+        </div>
+        <div class="box blue col-lg-4 col-lg-offset-2">
+            <h3 class="title">Gamble</h3>
+            <div class="splitter"></div>
+            <div class="text">
+                Lets start gambling points!
+            </div>
+            <form method="post" ng-submit="gamblePoints()" action="#" onsubmit="return false;">
+                <div class="form-group">
+                    <label for="cardnum">How many points</label>
+                    <input type="number" name="cardnum" class="form-control" id="cardnum" placeholder="10"
+                           required ng-model="formData.points">
+                </div>
+                <button type="submit" class="btn btn-default">Gamble</button>
+            </form>
+            <div ng-if="rolled" class="text" style="margin-bottom: 0;">You Rolled a..</div>
+            <div ng-if="rolled" class="text" style="font-size: 30pt" ng-bind-html="rolled"></div>
+            <div ng-if="error" class="alert alert-danger" role="alert"><span>{{error}}</span></div>
+        </div>
+    </div>
+
+    <div class="row" style="margin-top: 20px">
+        <div class="box small green col-lg-10 col-lg-offset-1">
+            <h3 class="title">How to play</h3>
+            <div class="splitter"></div>
+            <div class="text">
+                In this game you gamble a number of your points.<br/>
+                Select the number of points to gamble on the right. Then click the gamble button.<br/>
+                This will then generate a random number between 1-100 (inclusive). If you land on an even number you win
+                the number of points you gambled, if you land on an odd number you lose that many points.
+            </div>
+        </div>
+    </div>
+</div>

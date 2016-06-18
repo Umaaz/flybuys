@@ -1,0 +1,63 @@
+body {
+    font-family: "Open Sans", sans-serif;
+    font-weight: normal;
+    font-size: 12pt;
+}
+
+div#mainContent {
+    margin-top: 50px;
+}
+
+div.box > div.splitter {
+    border-bottom: 1px solid #FFFFFF;
+    width: 33.3%;
+    margin-left: 33.3%;
+}
+
+div.box > form > div > label {
+    margin-bottom: 20px;
+}
+
+div.box > form > div {
+    margin-bottom: 40px;
+}
+
+div.box > form > button {
+    width: 80%;
+    text-shadow: none;
+    background: #FFFFFF none;
+    border: none;
+}
+
+div.box > div, div.box > form {
+    margin-bottom: 20px;
+}
+
+div.box > h3.title {
+    text-align: center;
+}
+
+div.box.small {
+    height: inherit;
+}
+
+div.box {
+    text-align: center;
+    height: 376px;
+    padding: 0px 20px 20px 20px;
+}
+
+div.box.green {
+    color: #FFFFFF;
+    background-color: #96ca4f;
+}
+
+div.box.blue {
+    color: #FFFFFF;
+    background-color: #1099ce;
+}
+
+div.box.purple {
+    color: #FFFFFF;
+    background-color: #92278f;
+}
